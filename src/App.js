@@ -3,12 +3,17 @@ import {
   HashRouter,
   NavLink,
   Route,
-  Routes
+  Routes,
+  useNavigate
 } from 'react-router-dom';
 
 const Todo = () => {
-  return <p>這是 Todo 頁面 
-  </p>;
+  return (
+    <>
+      <p>這是 Todo 頁面 </p>
+      <Logout />
+    </>
+  )
 };
 const Login = () => {
   return <p>這是登入頁面</p>;
@@ -16,6 +21,12 @@ const Login = () => {
 const Register = () => {
   return <p>這是註冊頁面</p>;
 };
+const Logout = () => {
+  let navigate = useNavigate()
+  return <>
+  <button onClick={()=>{navigate('/login')}}>登出</button>
+  </> 
+}
 
 function App() {
   return (
