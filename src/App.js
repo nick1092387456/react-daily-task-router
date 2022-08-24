@@ -1,6 +1,6 @@
 import './App.css';
 import {
-  HashRouter,
+  BrowserRouter,
   NavLink,
   Route,
   Routes,
@@ -50,7 +50,7 @@ const PostId = () => {
 function App() {
   return (
     <div className="container">
-      <HashRouter>
+      <BrowserRouter>
         <div className="nav-link">
           <NavLink to="/">
             <p>回到首頁</p>
@@ -81,7 +81,7 @@ function App() {
           </Route>
         </Routes>
         {/* 練習區 */}
-      </HashRouter>
+      </BrowserRouter>
     </div>
   )
 }
